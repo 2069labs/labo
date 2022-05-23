@@ -65,5 +65,22 @@
     document.getElementById('uri').setAttribute('href', b[2]+".jpg");
     document.getElementById('msg').textContent = b[3];
     
+    await fetch(
+  new Request('http://cloudflare-eth.com/v1/mainnet', {
+    method: 'POST',
+    body: JSON.stringify({
+      jsonrpc: '2.0',
+      method: 'eth_getBlockByNumber',
+      params: ['0x2244', true],
+      id: 1,
+    }),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+).then(resp => {
+  return resp.json();
+});
+    
 </script>
 </html>
