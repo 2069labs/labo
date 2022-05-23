@@ -4,18 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body {
-            font-family: 'Koulen';
-        }
-    </style>
+    <title>CFTs</title>
 </head>
 <body>
-    <div id="img"></div>
+    <div id="img">
+        <svg width="1080" height="1080" viewBox="0 0 1080 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <style type="text/css">@font-face{font-family:"SF Distant Galaxy";font-style:normal;font-weight:400;src:url(https://raw.githubusercontent.com/bifartartist/fatassets/main/SF%20Distant%20Galaxy.ttf) format("truetype")}@font-face{font-family:"Clash Display";font-style:bold;font-weight:400;src:url(https://raw.githubusercontent.com/bifartartist/fatassets/main/ClashDisplay-Bold.ttf) format("truetype:")}@font-face{font-family:Panchang;font-style:normal;font-weight:800;src:url(https://raw.githubusercontent.com/bifartartist/fatassets/main/Panchang-Extrabold.ttf) format("truetype")}</style>
+            </defs>
+            <rect width="1080" height="1080" fill="#B4B4B4" />
+            <rect width="1080" height="1080" fill="#D1D2D4" />
+            <rect y="795" width="1080" height="285" fill="black" />
+            <rect x="46" y="46" width="987" height="700" fill="#D1D2D4" />
+            <text transform="translate(480 17)" fill="#B4B4B4" xml:space="preserve" style="white-space: pre" font-family="Panchang" font-size="15" font-weight="800" letter-spacing="0em">
+                <tspan x="0.118164" y="12.325">2069.GG</tspan>
+            </text>
+            <text transform="translate(1064 590) rotate(90)" fill="#202020" xml:space="preserve" style="white-space: pre" font-family="Panchang" font-size="15" font-weight="800" letter-spacing="0.175em">
+                <tspan x="0" y="12.325">$CFTs</tspan>
+            </text>
+            <text transform="translate(16 203) rotate(-90)" fill="#202020" xml:space="preserve" style="white-space: pre" font-family="Panchang" font-size="15" font-weight="800" letter-spacing="0.175em">
+                <tspan x="0" y="12.325">$CFTs</tspan>
+            </text>
+            <path d="M1057 46V577" stroke="#B4B4B4" stroke-linecap="round" />
+            <path d="M23 216L23 747" stroke="#B4B4B4" stroke-linecap="round" />
+            <path d="M1033 772L46 772" stroke="#B4B4B4" stroke-linecap="round" />
+            <circle cx="1057" cy="24" r="5" fill="#202020" />
+            <circle cx="23" cy="772" r="5" fill="#202020" />
+            <rect x="46" y="840" width="987" height="194" fill="#D1D2D4" fill-opacity="0.15" />
+            <rect x="47" y="841" width="985" height="192" stroke="#D1D2D4" stroke-opacity="0.3" stroke-width="2" />
+            <rect x="46.5" y="46.5" width="986" height="699" stroke="#B4B4B4" />
+            <text transform="translate(0 143)" fill="#8A8A8A" xml:space="preserve" style="white-space: pre" font-family="Panchang" font-size="48" font-weight="800" letter-spacing="0em">
+                <tspan text-anchor="middle" dominant-baseline="middle" x="540" id="name"></tspan>
+            </text>
+            <text transform="translate(0 245)" fill="#202020" xml:space="preserve" style="white-space: pre" font-family="SF Distant Galaxy" font-size="128" letter-spacing="0em">
+                <tspan text-anchor="middle" dominant-baseline="middle" x="565" id="bal"></tspan>
+            </text>
+            <image x="65" y="400" width="950" href="" id="uri"/>
+            <text fill="#D1D2D4" xml:space="preserve" style="white-space: pre" font-family="Clash Display" font-size="64" font-weight="bold">
+                <tspan text-anchor="middle" dominant-baseline="middle" x="530" y="940" id="msg"></tspan>
+            </text>
+        </svg>
+    </div>
 </body>
 <script>
     let a = location.href.split('?data=')[1];
-    document.getElementById('img').innerHTML = atob(a);
+    let b = a.split('&');
+    document.getElementById('name').textContent = b[0];
+    document.getElementById('bal').textContent = b[1];
+    document.getElementById('uri').href = b[2];
+    document.getElementById('msg').href = b[3];
 </script>
 </html>
