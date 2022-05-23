@@ -77,7 +77,7 @@
         });
         
         if(data!==undefined){
-            let x = atob(data.uri);
+            let x = data.uri;
             let lvd = JSON.parse(atob(x.split('base64,')[1])).animation_url.split('?data=')[1];
             let c = a.split('&');
             document.getElementById('name').textContent = c[0];
