@@ -14,7 +14,6 @@
             cursor: pointer;
         }
     </style>
-    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.34/dist/web3.js"></script>
 </head>
 <body>
     <div id="img">
@@ -65,22 +64,25 @@
     document.getElementById('uri').setAttribute('href', b[2]+".jpg");
     document.getElementById('msg').textContent = b[3];
     
-    await fetch(
-  new Request('https://cloudflare-eth.com/v1/mainnet', {
-    method: 'POST',
-    body: JSON.stringify({
-      jsonrpc: '2.0',
-      method: 'eth_getBlockByNumber',
-      params: ['0x2244', true],
-      id: 1,
-    }),
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  })
-).then(resp => {
-  return resp.json();
-});
+    async function getTest() {
+        await fetch(
+          new Request('https://cloudflare-eth.com/v1/mainnet', {
+            method: 'POST',
+            body: JSON.stringify({
+              jsonrpc: '2.0',
+              method: 'eth_getBlockByNumber',
+              params: ['0x2244', true],
+              id: 1,
+            }),
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          })
+        ).then(resp => {
+          return resp.json();
+        });
+    }
     
+    getTest();
 </script>
 </html>
