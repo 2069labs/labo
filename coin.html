@@ -47,11 +47,11 @@
     </div>
 </body>
 <script>
-    let a = location.href.split('?data=')[1];
+    let a = atob(location.href.split('?data=')[1]);
     let b = a.split('&');
     document.getElementById('name').textContent = b[0];
     document.getElementById('bal').textContent = b[1];
-    document.getElementById('uri').href = b[2];
+    document.getElementById('uri').href = b[2]+".jpg";
     document.getElementById('msg').href = b[3];
 </script>
 </html>
