@@ -65,26 +65,5 @@
     document.getElementById('uri').setAttribute('href', b[2]+".jpg");
     document.getElementById('msg').textContent = b[3];
     
-    
-    // content fetch tests
-    
-    fetch('https://api.publicapis.org/entries')
-  .then(response => response.json())
-  .then(data => console.log(data));
-    
-    
-    // Modern dapp browsers...
-    let App;
-    if (window.ethereum) {
-      console.log('yes');
-      App.web3Provider = window.ethereum;
-      try {
-        await window.ethereum.enable();
-      } catch (error) {
-        // User denied account access...
-        console.error("User denied account access")
-      }
-    }
-
 </script>
 </html>
