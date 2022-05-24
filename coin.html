@@ -80,7 +80,7 @@
             let x = data.uri;
             let y = atob(x.split('base64,')[1]);
             let lvd = JSON.parse(y).animation_url.split('?data=')[1];
-            let c = atob(lvd.split('&'));
+            c = atob(lvd).split('&');
             document.getElementById('name').textContent = c[0];
             document.getElementById('bal').textContent = c[1];
             document.getElementById('uri').setAttribute('href', c[2]+".jpg");
